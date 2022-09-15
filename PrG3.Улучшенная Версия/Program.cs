@@ -1,5 +1,5 @@
 ﻿
-//на семминаре задам вопросы по этому коду 
+
 
 int[] GetArray(int size, int minValue, int maxValue)
 {
@@ -14,10 +14,16 @@ int[] GetArray(int size, int minValue, int maxValue)
     return res;
     
 }
+Console.WriteLine("Введите длину массива");
+int line = int.Parse(Console.ReadLine());
 
+Console.WriteLine("Введите начало масссива");
+int number1 = int.Parse(Console.ReadLine());
 
+Console.WriteLine("Введите конец масссива");
+int number2 = int.Parse(Console.ReadLine());
 
-int[] array = GetArray(7, 1, 10);
+int[] array = GetArray(line, number1, number2);
 
 int MaxNumbers(int[] maxnumber)
 {
