@@ -29,14 +29,38 @@ int MaxNumbers(int[] maxnumber)
     {
         if (maxnumber[n] > max)
         {
-            maxnumber[n] = max;
+            max = maxnumber[n];
         }
         index = index  + 1;
+
         n = n + 1;
-        Console.WriteLine($"макс = {max}");
-        Console.WriteLine($"число = {n}");
+
     }
-    return(max);
+    return max;
 }
 
-Console.WriteLine(MaxNumbers(array));
+int MinNumbers(int[] minnumber)
+{
+    int index = 1;
+    int min = minnumber[0];
+    int n = 1;
+    
+    while (index < minnumber.Length)
+    {
+        if (minnumber[n] < min)
+        {
+            min = minnumber[n];
+        }
+        index = index  + 1;
+
+        n = n + 1;
+
+    }
+    return min;
+}
+
+Console.WriteLine();
+
+int razniza = MaxNumbers(array) - MinNumbers(array);
+
+Console.WriteLine(razniza);
