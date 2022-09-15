@@ -63,4 +63,4 @@ Console.WriteLine();
 
 int razniza = MaxNumbers(array) - MinNumbers(array);
 
-Console.WriteLine(razniza);
+Console.WriteLine($"Pазница между максимальным и минимальным элементов массива = {razniza}");
