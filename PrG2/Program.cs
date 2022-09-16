@@ -14,33 +14,39 @@ int[] GetArray(int size, int minValue, int maxValue)
     }
     Console.Write("]");
     return res;
-    
+
 }
 
 
 
 int[] array = GetArray(7, -10, 10);
 
-int index = 0;
-int n = 0;
-int sum = 0;
 
-while (index < array.Length)
+int SumNumbers(int[] array1)
 {
-    if (n % 2  != 0)
-    {
-        sum = sum + array[n];
-        index = index + 1;
 
-        n = n + 1;
-    }
-    else
+    int index = 0;
+    int n = 0;
+    int sum = 0;
+
+    while (index < array1.Length)
     {
-        index = index + 1;
-        n = n + 1;
+        if (n % 2 != 0)
+        {
+            sum = sum + array1[n];
+            index = index + 1;
+
+            n = n + 1;
+        }
+        else
+        {
+            index = index + 1;
+            n = n + 1;
+        }
     }
+    return sum;
 }
 
 Console.WriteLine();
 
-Console.WriteLine($"Сумма элементов, стоящих на нечётных позициях массива =  {sum}");
+Console.WriteLine($"Сумма элементов, стоящих на нечётных позициях массива =  {SumNumbers(array)}");

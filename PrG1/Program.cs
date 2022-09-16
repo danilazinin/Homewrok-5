@@ -17,27 +17,31 @@ int[] GetArray(int size, int minValue, int maxValue)
 
 int[] array = GetArray(5, 100, 999);
 
+int KolNUmbers(int[] array1)
+{
 int Kolnumbers = 0;
 int n = 0;
 int index = 0;
 
-while (index < array.Length)
+while (index < array1.Length)
 {
-    if (array[n]%2 == 0)
+    if (array1[n]%2 == 0)
     {
         Kolnumbers = Kolnumbers + 1;
     }
     n++;
     index++;
 }
+return Kolnumbers;
+}
 
 Console.WriteLine();
 
-if (Kolnumbers == 0)
+if (KolNUmbers(array) == 0)
 {
    Console.WriteLine("В данном массиве нет четных чисел");
 }
 else
 {
-  Console.WriteLine($"Kол-во четных чисел в данном массиве = {Kolnumbers}");
+  Console.WriteLine($"Kол-во четных чисел в данном массиве = {KolNUmbers(array)}");
 }
